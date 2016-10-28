@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
-import java.io.IOException;
+import java.io.FileWriter;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -11,7 +13,7 @@ import java.util.Scanner;
  */
 public class PasswordGen {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
 
         System.out.println("Select the criteria you want for your password:\n" +
                 "1. Randomly Mixed Characters\n" +
@@ -157,17 +159,26 @@ public class PasswordGen {
                     }
                 }
 
+
                 System.out.println(passString);
+
             }
 
+            File file = new File("C:/Users/Teb0ho/workspace/AnotherSoapProject/res/output.txt");
+
+            if(!file.exists()) {
+                file.createNewFile();
+            }
+
+            FileWriter fileWriter = new FileWriter(file, true);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            bufferedWriter.write(passString + "\n");
+            bufferedWriter.close();
 
         }
 
         catch(Exception e) {
             System.out.println(e.getMessage());
-
         }
-
     }
-
 }

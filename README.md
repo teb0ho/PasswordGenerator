@@ -5,3 +5,5 @@ In order for this program to work the FileReader directory argument has to chang
 
 ***
 ![alt tag](https://raw.githubusercontent.com/teb0ho/PasswordGenerator/master/snip28oct.PNG)
+
+Generated passwords will be saved in text file named "output.txt" in the res directory

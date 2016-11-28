@@ -15,6 +15,8 @@ public class PasswordGen {
 
     public static void main(String[] args)  {
 
+        String path = new File("").getAbsolutePath();
+
         System.out.println("Select the criteria you want for your password:\n" +
                 "1. Randomly Mixed Characters\n" +
                 "2. Name, Action, Object - Combination\n" +
@@ -57,14 +59,14 @@ public class PasswordGen {
 
             else if (criteria == 2) {
 
-                BufferedReader namestxt = new BufferedReader(new FileReader("C:/Users/Teb0ho/workspace/AnotherSoapProject/res/names.txt"));
+                BufferedReader namestxt = new BufferedReader(new FileReader(path + "/res/names.txt"));
                 ArrayList<String> fileNames = new ArrayList<>();
 
-                BufferedReader actionstxt = new BufferedReader(new FileReader("C:/Users/Teb0ho/workspace/AnotherSoapProject/res/actions.txt"));
+                BufferedReader actionstxt = new BufferedReader(new FileReader(path + "/res/actions.txt"));
                 ArrayList<String> fileActions = new ArrayList<>();
 
 
-                BufferedReader objectstxt = new BufferedReader(new FileReader("C:/Users/Teb0ho/workspace/AnotherSoapProject/res/objects.txt"));
+                BufferedReader objectstxt = new BufferedReader(new FileReader(path + "/res/objects.txt"));
                 ArrayList<String> fileObjects = new ArrayList<>();
 
 
@@ -164,7 +166,7 @@ public class PasswordGen {
 
             }
 
-            File file = new File("C:/Users/Teb0ho/workspace/AnotherSoapProject/res/output.txt");
+            File file = new File("res/output.txt").getAbsoluteFile();
 
             if(!file.exists()) {
                 file.createNewFile();

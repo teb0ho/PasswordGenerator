@@ -60,14 +60,14 @@ public class PasswordGen {
             else if (criteria == 2) {
 
                 BufferedReader namestxt = new BufferedReader(new FileReader(path + "/res/names.txt"));
-                ArrayList<String> fileNames = new ArrayList<>();
+                ArrayList<String> fileNames = new ArrayList<String>();
 
                 BufferedReader actionstxt = new BufferedReader(new FileReader(path + "/res/actions.txt"));
-                ArrayList<String> fileActions = new ArrayList<>();
+                ArrayList<String> fileActions = new ArrayList<String>();
 
 
                 BufferedReader objectstxt = new BufferedReader(new FileReader(path + "/res/objects.txt"));
-                ArrayList<String> fileObjects = new ArrayList<>();
+                ArrayList<String> fileObjects = new ArrayList<String>();
 
 
                 String str;

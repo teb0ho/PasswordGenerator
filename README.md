@@ -17,3 +17,20 @@ java -cp bin PasswordGen
 ```
 
 If the ```javac ``` command does not work on your CLI you might need set environment variables for your JDK.
+
+### Folder Structure
+
+      PasswordGenerator
+      ├── bin
+      │   └── PasswordGen.class
+      ├── README.md
+      ├── res
+      │   ├── actions.txt
+      │   ├── names.txt
+      │   ├── objects.txt
+      │   └── output.txt
+      └── src
+          └── PasswordGen.java
+
+      3 directories, 7 files
+
